@@ -351,3 +351,5 @@ if __name__ == "__main__":
     window.mainloop()
     print("END MAIN LOOP")
 
+maze_problem = MazeProblem(maze)
+

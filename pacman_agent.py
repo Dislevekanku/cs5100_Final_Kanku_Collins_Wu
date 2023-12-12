@@ -49,6 +49,7 @@ class PacmanAgent:
         self.pacnet.eval()
         
 
+    
     def choose_action(self, perception, legal_actions):
         """
         Returns an action from the options in Constants.MOVES based on the agent's
@@ -57,5 +58,4 @@ class PacmanAgent:
         :legal_actions: Map of legal actions to their next agent states
         :return: Action choice from the set of legal_actions
         """
-        # TODO: Task 8 Here
         return random.choice(Constants.MOVES)

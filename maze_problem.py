@@ -24,6 +24,7 @@ class MazeProblem:
         :maze: a list of list of strings containing maze elements
         """
         self.maze = maze
+        self._player_loc = None
          # Maze block sets
         self._ghosts = set()
         self._pellets = set()
@@ -40,6 +41,9 @@ class MazeProblem:
                     self._pellets.add((col_num, row_num))
                 if cell == Constants.PLR_BLOCK:
                     self._player_loc = self._initial_loc = (col_num, row_num)
+
+    def set_player_loc(self, player_loc):
+        self._player_loc = player_loc
 
     def get_player_loc(self):
         """

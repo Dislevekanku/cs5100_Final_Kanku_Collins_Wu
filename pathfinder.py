@@ -36,6 +36,10 @@ def heuristic(state, goal):
     :state: A maze location tuple
     :goal: A maze location tuple
     """
+    if state is None or goal is None:
+        # Handle the case where either state or goal is None
+        return float('inf')  # or any other appropriate value
+
     return abs(state[0] - goal[0]) + abs(state[1] - goal[1])
 
 
