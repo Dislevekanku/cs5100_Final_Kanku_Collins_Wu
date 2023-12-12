@@ -155,7 +155,10 @@ def train_loop(dataloader, model, loss_fn, optimizer, device):
 
         optimizer.zero_grad()
         loss.backward()
+        # Update parameters with optimizer
         optimizer.step()
+
+    
 
         current = batch * len(X)
         average_loss = loss.item() / len(X)
@@ -252,9 +255,5 @@ if __name__ == "__main__":
     """
     main()
     
-    # TODO: Task 4 Here
-    
-    # TODO: Task 5 Here
-    
-    # TODO: Task 6 Here
+
     

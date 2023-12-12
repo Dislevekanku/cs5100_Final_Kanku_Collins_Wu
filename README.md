@@ -34,49 +34,15 @@ brew install python-tk
 ## Quickstart
 
 ```
-$ git clone git@github.com:masaok/pacman-agent.git
+$ clone this repository
 $ cd pacman-agent
-$ python3 -m venv env
-$ source env/Scripts/activate  # Windows Git Bash only
-$ source env/bin/activate      # Mac / Linux only
 $ pip install -r requirements.txt
-$ python3 -u environment.py -h  # Show command-line help
 $ python3 -u environment.py     # Run the app and show the GUI
 ```
 
 ```
 $ deactivate  # exit virtual environment
 ```
-
-#### VcXsrv (X server for Windows to run GUI stuff)
-
-Download and install VcXsrv from here: https://sourceforge.net/projects/vcxsrv/
-
-When running it (it's called XLaunch in Windows), make sure to check this box:
-
-<img src="https://user-images.githubusercontent.com/1320083/144793105-700cf916-2702-4510-9e22-72e578c21e36.png" width="40%" height="40%">
-
-Also, add [**this**](https://stackoverflow.com/a/61110604/10415969) to your `.bash_profile` and `source` it:
-
-```
-export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0
-export LIBGL_ALWAYS_INDIRECT=1
-```
-
-**Verify that VcXsrv is running correctly by testing Xcalc:**
-
-<img src="https://user-images.githubusercontent.com/1320083/144791512-15fa20b7-8dff-4e3f-ba2f-55ade96f3276.png" width="40%" height="40%">
-
-Also, make this change in the code whereever `torch.load` is called:
-
-https://stackoverflow.com/questions/56369030/runtimeerror-attempting-to-deserialize-object-on-a-cuda-device/62327502#62327502
-
-**Run the real thing:**
-
-`python3 -u environment.py`
-
-<img src="https://user-images.githubusercontent.com/1320083/144791554-3731ce3c-99e2-4877-a766-cbf4664984db.png" width="40%" height="40%">
-
 ## Components
 
 - **PacmanAgent**: Contains all of the logic for the agent controlling Pacman
@@ -100,4 +66,4 @@ https://stackoverflow.com/questions/56369030/runtimeerror-attempting-to-deserial
 
 ## Exercise
 
-To view the accompanying exercise binding Pacman Trainer and Agent, see the EXERCISE.md instructions.
+To view the accompanying logic binding Pacman Trainer and Agent, see the EXERCISE.md instructions.
